@@ -1,0 +1,146 @@
+
+.estate-card-container {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(206, 205, 205);
+    width: 380px;
+    border-radius: 16px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 0px 8px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+}
+
+.image-estate{
+    border-radius: 10px;
+}
+
+.estate-carousel {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    /* margin-bottom: 1rem; */
+}
+
+.estate-sale-type {
+    z-index: 1;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    background-color: blue;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+
+.estate-carousel-prev-left {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    left: 0;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.estate-carousel-button {    
+    font-size: 1.25rem;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #808080ad;
+}
+
+.estate-carousel-prev-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    right: 0;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.estate-name {
+    margin-inline: 1rem;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 28px;
+    padding-bottom: 0px;
+}
+
+.estate-descrption{
+    margin-inline: 1rem;
+    font-size: 10px;
+    font-weight: 600;
+    color: rgb(90, 87, 87);
+    line-height: 10px;
+    padding-bottom: 0px;
+}
+
+.estate-price {
+    margin-inline: 1rem;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 28px;
+    text-shadow: 1px 1px 1px gray;
+}
+
+.estate-features {
+    margin-inline: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    
+}
+
+.position-meters{
+    margin: 2px;
+}
+
+
+
+.estate-agent-container {
+    font-size: 15px;
+    font-weight: 700;
+    margin-inline: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-block: 0.5rem;
+    border-top: 1px solid #8b8b8b;
+    
+    
+}
+
+.estate-carousel-content {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-right: -100%;
+}
+
+.estate-agent-container .estate-agent-name {
+    cursor: pointer;
+    margin-left: 1rem;
+    cursor: pointer
+}
+
+.estate-bedrooms{
+    padding-inline: 8px;
+}
+
+.estate-agent-img{
+    cursor: pointer;
+    border-radius: 50%;
+    border: solid 2px gray;
+    cursor: pointer
+}
+

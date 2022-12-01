@@ -1,0 +1,223 @@
+.container-about-us{
+    padding-top: 40px;
+    padding-inline: 80px;
+    font-family: 'Montserrat', sans-serif;
+}
+.estate-description-container{
+    margin: 20px;
+    font-weight: bold;
+}
+
+/*para estilizar el box-about-us*/
+
+.container-description{
+   /* background-color: rgb(216, 213, 213);*/
+}
+.title-about-us
+{
+    text-align: left;
+    margin-top: 20px;
+    font-size: 34px;
+    font-weight: bold;
+    
+}
+
+.about-us-img{
+    position: relative;
+    margin-top: 12px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    height: 350px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.about-us-img-top{
+    position: absolute;
+    margin-top: 10px;
+    background: rgba(10, 81, 214, 0.5);
+    font-weight: 900;
+    font-size: 30px;
+    top: 17px;
+    left: 50px;
+    
+}
+
+
+.socials-box{
+    margin-top: 20px;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.facebook {
+    color: #4e64b5;
+    
+}
+
+.twitter {
+    
+}
+.instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+            /* Also define standard property for compatibility */
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+     /* change this to change the size*/
+    
+}
+.youtube {
+    color: red;
+}
+
+.telegram {
+    color:  #0088cc;
+}
+
+
+
+
+
+/*para estilizar el goals-box*/
+/*.box-estate-goals{
+    padding: 10px;
+    border-right: 1px solid rgb(184, 183, 183);
+} */
+.goals-title{
+    text-align: left;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 800;
+    
+}
+
+.goals-team-img{   
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+/*para estilizar el Contact Us*/
+.box-contact-us{
+    background-color: rgb(245, 239, 239);
+    border-radius: 20px;
+    width: 300px;
+    margin-top: 10px;
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0; 
+   /* box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset; */
+}
+
+
+
+.estate-agent-container{
+    margin-inline: 2rem;
+    padding-block: 0.5rem;
+    align-items: center;
+    display: grid;
+    grid-template-rows: 60px 80px 230px 380px;
+    align-items: center;
+    justify-content: center;
+    /*border: 1px solid rgb(173, 171, 171);*/
+    border-radius: 12px;
+    gap: 1rem;
+    margin-bottom: 10px;
+}
+
+.estate-agent-top{
+    font-weight: bold;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 28px;
+    padding-bottom: 0px;
+    border-bottom: 1px solid rgb(173, 171, 171);
+    margin-inline: 1rem;
+}
+
+
+.estate-agent-img{
+    align-items: center;
+    justify-content: center;
+    margin-inline: 2rem;
+    border-radius: 10px;
+}
+
+
+/*Para el nombre del asesor*/
+.estate-agent-name{
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 28px;
+    padding-bottom: 0px;
+    margin-inline: 0rem;
+}
+.name-top  {
+    color: grey;
+/*border-bottom: 1px solid rgb(184, 183, 183);*/
+    font-size: 22px;
+    margin-inline: 1rem;
+}
+.phone-top ,
+.email-top{
+    color: grey;
+    font-size: 12.5px;
+    margin-inline: 0rem;
+}
+
+.agent-phone a, .agent-email a{
+    text-decoration: none;
+    font-size: 15px;
+    color: #007BFF;
+    margin-left: 5px;
+    margin-inline: 0rem;
+  }
+
+.agent-name{
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 28px;
+    padding-bottom: 0px;
+    margin-inline: 1rem;
+}
+
+
+.estate-agent-features{
+    margin-inline: 1rem;
+    font-size: 13.5px;
+    font-weight: 900;
+    line-height: 28px;
+    padding-bottom: 0px;
+}
+
+.btn-contact-agent{
+    margin-inline: 1rem;
+    width: 150px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: blue;
+    border: 1px solid rgb(184, 183, 183);
+    color: white;
+    font-weight: 900;
+    font-size: 14px;
+}
+
+/*Agent Contact form */
+
+.form-top{
+    font-weight: 900;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+  
+ 
+  .container {
+    border-radius: 5px;
+    /*background-color: #f2f2f2;*/
+    padding: 20px;
+  }

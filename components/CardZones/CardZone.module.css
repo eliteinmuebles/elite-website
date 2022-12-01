@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
+.estate-card-container{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+.city-name{
+    font-family: Montserrat, Roboto, Helvetica, Arial, sans-serif;
+    font-style: italic;
+    position: absolute;
+    top: 28px;
+    left: 42px;
+    text-align: center;
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 28px;
+    padding-bottom: 0px;
+    color: white;
+    background-color:#000000ad;
+    width: 50%;
+}
+
+
+
+.city-descrption{
+    position: absolute;
+    color: white;
+    bottom: 1px;
+    left: 50%;
+    transform: translate(-50%, 18%);
+    padding: 8px;
+    opacity: 0.8;
+    background-color: #212529;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 15px;
+    padding-bottom: 0px;
+    width: 80%;
+    height: 50px;
+}

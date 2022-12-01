@@ -1,0 +1,4 @@
+.container-remaining {
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+}

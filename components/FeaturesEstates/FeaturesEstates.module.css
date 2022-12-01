@@ -1,0 +1,15 @@
+.container-features{
+    
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.title-estates{
+    font-weight: bold;
+    text-align: left;
+    font-size: 30px;
+    color: #212529;
+    text-shadow: 1.5px 2px #b1adad;
+}

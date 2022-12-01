@@ -1,0 +1,100 @@
+.blog{
+  background-color: #efefef ;
+}
+
+.blog-container{
+  padding-left: 100px;
+}
+
+.row{
+  max-width: 1200px;
+  /*background-color: rgb(189, 184, 184);*/
+  width: 100%;
+  padding: 60px 0;
+  /*box-shadow: inset 0px 0px 20px gray;*/
+  padding-top: 0;
+  margin-top: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.single-blog{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+    margin-top: 30px;
+    background-color: #fff;
+    border: 0.5px solid #8080806b;
+    
+}
+
+.single-blog img{
+    width: 100%;
+    
+}
+
+.blog-meta{
+    font-size: 14px;
+    margin-bottom: 10px;
+    
+}
+
+.single-blog span{
+    float: right;
+    font-size: 12px;
+    color: black;
+}
+
+.blog-text{
+    font-size: 14px;
+    text-align: justify;
+}
+
+.single-blog h2{
+    margin-top: 10px;
+    font-size: 20px;
+    color: black;
+}
+
+
+
+.title-blog{
+    color: black;
+    text-decoration: none;
+}
+
+.read-more-btn{
+    color: black;
+    background-image: linear-gradient(to right, #fff, rgb(180, 177, 177));
+    padding: 4px 12px;
+    border-radius: 10px;
+    line-height: 20px;
+    font-size: 14px;
+    
+    border:1px solid black;
+}
+
+.read-more-btn:hover{
+    background-image: linear-gradient(to right, rgb(180, 177, 177),  black);
+    text-decoration: none;
+    color: #fff;
+}
+
+.linkpage{
+    position: relative;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: underline;
+    color: black;
+    left: 1090px;
+    bottom: 45px;
+    
+}
+
+.linkpage:hover{
+   color: blue;
+}

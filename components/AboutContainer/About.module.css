@@ -1,0 +1,75 @@
+.container{
+    background-color: #383636;
+    color: white;
+    /*background-color: #212529; */
+}
+
+.container-info{
+    color: white;
+    font-size: 0.875rem;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.43;
+    font-weight: 900;
+    background-color: rgb(223, 217, 217);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-inline: 2rem;
+    padding: 80px;
+    
+}
+
+.box-info{
+    margin-inline: 2rem;
+    flex: 1 0 auto;
+    font-size: 2rem;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.elite-title{
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: 900;
+}
+
+.box-description{
+    display: block;
+    font-size: 0.9rem;
+    margin-block-start: 2.33em;
+    margin-block-end: 2.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.linkpage{
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: transparent;
+    color: rgb(75, 75, 75);
+}
+
+.linkpage:hover{
+    color: black;
+   text-decoration: underline;
+}
+
+.box.img{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
