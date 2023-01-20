@@ -1,5 +1,13 @@
 import Carousel from 'react-bootstrap/Carousel';
 import styles from "./CardEstate.module.css"
+import Link from 'next/link';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faBed, 
+    faToilet,
+    faRuler, 
+    faCar
+} from "@fortawesome/free-solid-svg-icons";
 
 interface CardEstateProps {
     estateName?: string,
@@ -8,8 +16,10 @@ interface CardEstateProps {
     estatePictures?: string[],
     estateSalesType?: string,
     estateFeatures?: EstateFeatures,
-    estateAgent?: EstateAgent
-
+    estateAgent?: EstateAgent,
+    width?: string | number,
+    estatusType?: string,
+    nameType?: string
 }
 
 interface EstateFeatures {
@@ -28,64 +38,53 @@ interface EstateAgent {
     profilePic?: string,
 }
 
-export const CardEstate = ({estateName, estateDescription, estateSalesType, estatePictures, estatePrice, estateFeatures, estateAgent}:CardEstateProps) => {
+export const CardEstate = ({estateName,  estateSalesType, estatePictures, estatePrice, estateFeatures, estateAgent, width, estatusType, nameType,estateDescription }:CardEstateProps) => {
     return (
-        <div className={styles["estate-card-container"]}>
-        {/*<ul id="carousel-card" className={styles["estate-carousel"]}>
-            <li className={styles["estate-sale-type"]}>
-                <span>{estateSalesType}</span>
-            </li>
-            <li className={styles["estate-carousel-prev-left"]}>
-                <i className="fa-solid fa-chevron-left estate-carousel-button"></i>
-            </li>
-            <li className={styles["estate-carousel-prev-right"]}>
-                <i className="fa-solid fa-chevron-right estate-carousel-button"></i>
-            </li>
-            <li className={styles["estate-carousel-content"]}>
-                <img width="100%" id="estate-card-image-carousel" src="images/apart1.jpg" />
-            </li>
-            </ul>*/}
-        <div className="images-container" >
-        <Carousel>
-            <Carousel.Item>
-                <img style={{width: "100%"}} className={styles["image-estate"]} src="images/apart1.jpg" />
+    <div className={styles["estate-card-container"]} style={{width: width? width: "", marginBottom:"20px"}}>
         
-            </Carousel.Item>
-
-            <Carousel.Item>
-                <img style={{width: "100%"}} className={styles["image-estate"]} src="images/apart1.jpg" />
-            </Carousel.Item>
-
-            <Carousel.Item>
-                <img style={{width: "100%"}} className={styles["image-estate"]} src="images/apart1.jpg" />
-            </Carousel.Item>
-
-        </Carousel>
-            
-        </div>
-        
-        <span className={styles["estate-name"]}>{estateName}</span>   
-        <span className={styles["estate-descrption"]}>{estateDescription}</span>
-        <span className={styles["estate-price"]}>{estatePrice}</span>
-        <div className={styles["estate-features"]}>
-            <div className={styles["estate-bedrooms"]}>
-                <div >{/*<i className="fa-solid fa-bed">*/}{estateFeatures?.rooms}{/*</i>*/}</div>
-            </div>
-            <div className={styles["estate-bathrooms"]}>
-                <div>{/*<i className="fa-solid fa-shower"> */}{estateFeatures?.bathrooms}{/*</i> */}</div>
-            </div>
-            <div className={styles["estate-area"]}>
-                <div><i className="fa-solid fa-vector-square">{estateFeatures?.area} m<span className={styles["position-meters"]} style={{position: "relative", fontSize:" 75%", top: "-5px"}}>2</span></i></div>
-            </div>
-            <div></div>
-            <div>
-                <div><i className="fa-solid fa-car"> {estateFeatures?.parkingSpots}</i></div>
-            </div>
-        </div>
-        <div className={styles["estate-agent-container"]}>
-            <img className={styles["estate-agent-img"]} width="40px" height="40px" src={estateAgent?.profilePic? estateAgent?.profilePic : "images/avatar.jpg" } />
-            <span className={styles["estate-agent-name"]}>{`${estateAgent?.firstName} ${estateAgent?.lastName}` }</span>
-        </div>
+                <div className="images-container" >
+                <Carousel>
+                    {   estatePictures && estatePictures.length?
+                        estatePictures.map((pic:string) => (
+                        <Carousel.Item>
+                            <img style={{width: "100%", height: "200px"}} className={styles["image-estate"]} src={pic} />
+                        </Carousel.Item>
+                    ))
+                    :
+                    null
+                    }
+                </Carousel>
+                    
+                </div>
+                    <Link href='/estateDetail/1' className={styles["estate-name-container"]} >
+                        <span className={styles["estate-name"]}>{estateName}</span> 
+                    </Link>
+                    
+                    <span className={styles["estate-description"]}>{estateDescription}</span>
+                    <span className={styles["estate-price"]}><span className={styles['price-simbol']}>$</span>{estatePrice}</span>
+                    <span className={styles['caracteristicas']}>Caracteristicas:</span>
+                    <div className={styles["estate-features"]}>
+                        <div className={styles["estate-bedrooms"]}>
+                            <div style={{fontSize: 20}} >{estateFeatures?.rooms}<FontAwesomeIcon icon={faBed} style={{ fontSize: 20, padding:"3px"}} /></div>
+                        </div>
+                        <div className={styles['box-icons']}>
+                            <div style={{fontSize: 20}}>{estateFeatures?.bathrooms}<FontAwesomeIcon icon={faToilet} style={{ fontSize: 20,padding:"3px" }} /></div>
+                        </div>
+                        <div className={styles['box-icons']}>
+                            <div  style={{fontSize: 20}}>{estateFeatures?.area} m<span className={styles["position-meters"]} style={{position: "relative", fontSize:" 75%", top: "-5px"}}>2</span><FontAwesomeIcon icon={faRuler} style={{ fontSize: 20,padding:"3px"}}/></div>
+                        </div>
+                        <div></div>
+                        <div className={styles['box-icons']}>
+                            <div  style={{fontSize: 20}}>{estateFeatures?.parkingSpots}<FontAwesomeIcon icon={faCar} style={{ fontSize: 20,padding:"3px" }}/> </div>
+                        </div>
+                    </div>
+                
+               
+                <Link href='/agent/1' className={styles["estate-agent-container"]}>
+                    <img className={styles["estate-agent-img"]} width="40px" height="40px" src={estateAgent?.profilePic? estateAgent?.profilePic : "images/predet.jpg" } />
+                    <span className={styles["estate-agent-name"]}>{`${estateAgent?.firstName} ${estateAgent?.lastName}` }</span>
+                </Link>
+                
     </div>
     )
 }

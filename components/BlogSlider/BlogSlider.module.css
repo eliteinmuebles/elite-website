@@ -1,0 +1,16 @@
+.containerBlog{
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.containerTitleBlog{
+
+}
+
+.titleBlog{
+    font-weight: bold;
+    text-align: left;
+    font-size: 30px;
+    text-shadow: 1.5px 2px #b1adad;
+    color: #212529;
+}

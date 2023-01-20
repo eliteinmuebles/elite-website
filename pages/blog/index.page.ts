@@ -1,0 +1,1 @@
+export {blog as default} from '.'

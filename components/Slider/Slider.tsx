@@ -1,7 +1,12 @@
 import styles from "./Slider.module.css"
-import leftArrow from "./icons/left-arrow.svg";
-import rightArrow from "./icons/right-arrow.svg";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {useEffect} from "react"
+import {
+    faPhone,
+    faEnvelope,
+    faChevronLeft,
+    faChevronRight
+  } from "@fortawesome/free-solid-svg-icons";
 
 interface Props {
     children: JSX.Element,
@@ -9,10 +14,11 @@ interface Props {
     setLeft: (arg:boolean) => void,
     right: boolean,
     setRight: (arg:boolean) => void,
+    marginBottom?: string
 }
 
 
-export const Slider = ({children, setLeft, left, right, setRight}: Props) => {
+export const Slider = ({children, setLeft, left, right, setRight, marginBottom}: Props) => {
     useEffect(() => {
         if (left) setLeft(false)
     }, [left])
@@ -22,22 +28,22 @@ export const Slider = ({children, setLeft, left, right, setRight}: Props) => {
     }, [right])
     
     return (
-        <section className={styles['slider']} >
-        <button className={styles['left-arrow']} onClick={() => setLeft(true)}>
-            {/*<img src="{leftArrow}" /> */}
-            {"<"}
-        </button>
-        <div className={styles['right-arrow']} onClick={() => setRight(true)}>
-           {/* <img src="{rightArrow}" /> */}
-           {">"}
-        </div>
-       
-            <div
-              className={true ? styles['slide active' ]: styles['slide']}
-            >
-              {children}
-            </div>
+        <section className={styles['slider']} style={{
+              marginBottom: marginBottom? marginBottom : ""
+          }}>
+          <div className={styles['left-arrow']} onClick={() => setLeft(true)}>
+          <FontAwesomeIcon icon={faChevronLeft} style={{ fontSize: 40, color: "black"}} />
+          </div>
+          <div className={styles['right-arrow']} onClick={() => setRight(true)}>
+          <FontAwesomeIcon icon={faChevronRight} style={{ fontSize: 40, color: "black"}} />
+          </div>
+        
+              <div
+                className={true ? styles['slide active' ]: styles['slide']}
+              >
+                {children}
+              </div>
          
-      </section>
+        </section>
     )
 }

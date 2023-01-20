@@ -1,1 +1,1 @@
-export { AboutUs as default} from "./AboutUs"
+export { about as default} from "."

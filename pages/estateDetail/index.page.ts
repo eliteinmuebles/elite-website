@@ -1,0 +1,1 @@
+export {estateDetail as default} from "./[id]"

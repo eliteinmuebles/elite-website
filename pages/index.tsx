@@ -6,6 +6,7 @@ import { FeaturesEstates } from '../components/FeaturesEstates'
 import { About } from '../components/AboutContainer'
 import { ZoneSliding } from '../components/ZoneSliding'
 import { Page } from '../components/Page'
+import { BlogSlider } from '../components/BlogSlider'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <FeaturesEstates/>
         <About/>
         <ZoneSliding/>
+        <BlogSlider/>
     </Page>
   )
 }

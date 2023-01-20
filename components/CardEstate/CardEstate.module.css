@@ -1,18 +1,20 @@
 
 .estate-card-container {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(206, 205, 205);
-    width: 380px;
+    background-color: rgba(182, 177, 177, 0.425);
     border-radius: 16px;
     box-shadow: rgb(0 0 0 / 10%) 0px 0px 8px 8px;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-
+    border: 1px solid gray;
+    position: relative;
 }
 
 .image-estate{
     border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 .estate-carousel {
@@ -24,15 +26,24 @@
     /* margin-bottom: 1rem; */
 }
 
-.estate-sale-type {
-    z-index: 1;
-    position: absolute;
-    top: 10px;
-    left: 15px;
-    background-color: blue;
-    color: white;
-    padding: 4px 8px;
-    border-radius: 5px;
+.estateSaleType{
+    margin-inline: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    
+}
+
+.estatusType {
+    
+    padding: 6px;
+    border-radius: 30%;
+}
+
+.nameType{
+    font-size: 15px;
+   
 }
 
 .estate-carousel-prev-left {
@@ -70,18 +81,18 @@
 
 .estate-name {
     margin-inline: 1rem;
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 800;
     line-height: 28px;
     padding-bottom: 0px;
 }
 
-.estate-descrption{
+.estate-description{
     margin-inline: 1rem;
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 600;
     color: rgb(90, 87, 87);
-    line-height: 10px;
+    line-height: 12px;
     padding-bottom: 0px;
 }
 
@@ -91,14 +102,25 @@
     font-weight: 700;
     line-height: 28px;
     text-shadow: 1px 1px 1px gray;
+
 }
 
-.estate-features {
+.price-simbol{
+    color: green;
+}
+
+.caracteristicas{
+    font-size: 10px;
+    font-weight: 700;
     margin-inline: 1rem;
+}
+.estate-features {
+    margin-inline: 1.5rem;
     display: flex;
     flex-direction: row;
-    gap: 0.5rem;
-    
+    gap: 1rem;
+    border-radius: 10px;
+   
 }
 
 .position-meters{
@@ -115,9 +137,19 @@
     flex-direction: row;
     align-items: center;
     padding-block: 0.5rem;
-    border-top: 1px solid #8b8b8b;
-    
-    
+    border-top: 1px solid #9c9b9b;
+    text-decoration: none;
+    color: rgb(37, 37, 37);
+    font-weight: bold;
+}
+.estate-name-container{
+    text-decoration: none;
+    color: rgb(37, 37, 37);
+    font-weight: bold;
+}
+.estate-name-container:hover{
+    text-decoration: 1px solid underline;
+    color: black;
 }
 
 .estate-carousel-content {
@@ -130,9 +162,16 @@
 .estate-agent-container .estate-agent-name {
     cursor: pointer;
     margin-left: 1rem;
-    cursor: pointer
+    
+}
+.estate-agent-name:hover{
+    text-decoration: 1px solid underline;
+    color: black;
 }
 
+.estate-agent-container:hover{
+    color: black;
+}
 .estate-bedrooms{
     padding-inline: 8px;
 }
@@ -140,7 +179,12 @@
 .estate-agent-img{
     cursor: pointer;
     border-radius: 50%;
+
     border: solid 2px gray;
     cursor: pointer
 }
 
+.box-icons{
+    border-left: black;
+    
+}
