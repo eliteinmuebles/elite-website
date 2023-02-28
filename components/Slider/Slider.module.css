@@ -4,6 +4,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    scroll-snap-type: x mandatory;
   }
   
   .image {
@@ -15,7 +17,7 @@
   .right-arrow {
     position: absolute;
     top: 50%;
-    right: 8px;
+    right: 15px;
     font-size: 3rem;
     color: #000;
     z-index: 10;
@@ -37,11 +39,65 @@
   .slide {
     opacity: 0;
     transition-duration: 1s ease;
+    scroll-snap-align: center;
   }
   
   .slide.active {
     opacity: 1;
     transition-duration: 1s;
     transform: scale(1.08);
+    scroll-snap-align: center;
   }
 
+
+  @media screen and (max-width: 1440px) {
+    .right-arrow{
+      right: 8px;
+    }
+    .left-arrow{
+      left: 8px;
+    }
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .right-arrow{
+      right: 60px;
+    }
+    .left-arrow{
+      left: 60px;
+    }
+   
+  }
+  
+  @media screen and (max-width: 768px) {
+    .right-arrow{
+      right: 7px;
+    }
+    .left-arrow{
+      left: 7px;
+    }
+     
+    }
+  
+  @media screen and (max-width: 430px) {
+      .right-arrow{
+        right: -12px;
+      }
+      .left-arrow{
+        left: -12px;
+      }
+      
+    }
+  
+  @media screen and (max-width: 390px) {
+      .right-arrow{
+        right: -12px;
+        
+      }
+      .left-arrow{
+        left: -16px;
+        
+      }
+      
+    }
+  

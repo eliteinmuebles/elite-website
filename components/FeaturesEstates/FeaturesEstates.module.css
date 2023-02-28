@@ -1,10 +1,9 @@
 .container-features{
-    height: 550px;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    margin-bottom: 10px;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
 }
 
 .title-estates{
@@ -14,3 +13,49 @@
     color: #212529;
     text-shadow: 1.5px 2px #b1adad;
 }
+
+@media screen and (max-width: 1440px) {
+ .container-features{
+  height: 600px;
+ }
+}
+
+@media screen and (max-width: 1024px) {
+  .container-features{
+   
+    
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-features{
+    height: 580px;
+  }
+    
+  }
+
+@media screen and (max-width: 430px) {
+   .title-estates{
+    text-align: center;
+   }
+    .container-features{
+      margin: 0 4px 0 14px;
+    }
+  }
+
+@media screen and (max-width: 390px) {
+   .container-features{
+    width: 420px;
+   }
+    .title-estates{
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 330px) {
+    .container-features{
+      margin: 5px 8px  10px;
+    }
+  }
+
+

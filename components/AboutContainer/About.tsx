@@ -17,7 +17,7 @@ export const About = () => (
                 </div>
                 <div className="col">
                     <div className={styles["box-img"]}>
-                        <img src="images/apart1.jpg" width="100%"/>
+                        <img src="images/apart1.jpg" className={styles["img-about"]} width="100%"/>
                     </div>
                 </div>  
             </div>

@@ -2,6 +2,7 @@ import styles from "./BlogSlider.module.css"
 import { CardBlog } from "../CardBlog"
 import { Slider } from "../Slider";
 import { useState, useEffect} from "react"
+import useWindowSize from "../../hooks/useScreenSize";
 
 const mockBlogData = [
     {
@@ -75,7 +76,11 @@ export const BlogSlider = () => {
     const [right, setRight] = useState(false);
     const [info, setInfo] = useState([...mockBlogData].slice(0,3));
     const [sliceValue, setSliceValue] = useState(0);
-  
+    const [cardEstateWidth, setCardEstateWidth] = useState("360px")
+    const [cardEstateHeight, setCardEstateHeight] = useState("390px")
+    const [limit, setLimit] = useState(3)
+    const screen = useWindowSize()
+
     useEffect(() => {
       if (left)  {
         const value = [...mockBlogData].length
@@ -101,6 +106,32 @@ export const BlogSlider = () => {
          }
        }
      }, [right])
+
+     useEffect(() => {
+      if (screen && screen.width? screen.width <= 576 : null) {
+        setLimit(1)
+        setInfo([...mockBlogData].slice(0,1))
+        setCardEstateWidth("330px")
+      };
+      if (screen && screen.width? screen.width < 1200 && screen.width > 800   : null) {
+        setLimit(2)
+        setInfo([...mockBlogData].slice(0,2))
+        setCardEstateWidth("340px")
+       
+      };
+      if (screen && screen.width? screen.width < 800 && screen.width > 500   : null) {
+        setLimit(2)
+        setInfo([...mockBlogData].slice(0,1))
+        setCardEstateWidth("420px")
+        setCardEstateHeight("330px")
+      };
+      if (screen && screen.width? screen.width >= 1200   : null) {
+        setLimit(3)
+        setInfo([...mockBlogData].slice(0,3))
+      };
+      console.log(screen)
+     }, [screen])
+
   
     return (
      <>
@@ -117,9 +148,11 @@ export const BlogSlider = () => {
               >
                 
             <div className="row">
-                  {info.map((i:any) => (
-                    <div className="col">
+                  {info.map((i:any, index: number) => (
+                    <div key={`blog-key-${index}`} className="col">
                       <CardBlog
+                        width={cardEstateWidth}
+                        heigth={cardEstateHeight}
                         blogTitle={i.blogTitle}
                         blogDescription={i.blogDescription}
                         imageBlog={i.imageBlog}

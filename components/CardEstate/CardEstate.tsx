@@ -19,7 +19,8 @@ interface CardEstateProps {
     estateAgent?: EstateAgent,
     width?: string | number,
     estatusType?: string,
-    nameType?: string
+    nameType?: string,
+    classNameOuterContainer?: string,
 }
 
 interface EstateFeatures {
@@ -38,23 +39,23 @@ interface EstateAgent {
     profilePic?: string,
 }
 
-export const CardEstate = ({estateName,  estateSalesType, estatePictures, estatePrice, estateFeatures, estateAgent, width, estatusType, nameType,estateDescription }:CardEstateProps) => {
+export const CardEstate = ({estateName,  estateSalesType, estatePictures, estatePrice, estateFeatures, estateAgent, width, estatusType, nameType,estateDescription, classNameOuterContainer }:CardEstateProps) => {
     return (
     <div className={styles["estate-card-container"]} style={{width: width? width: "", marginBottom:"20px"}}>
-        
-                <div className="images-container" >
+            <div className="images-container" >
                 <Carousel>
                     {   estatePictures && estatePictures.length?
                         estatePictures.map((pic:string) => (
                         <Carousel.Item>
-                            <img style={{width: "100%", height: "200px"}} className={styles["image-estate"]} src={pic} />
+                            <Link href='/estatesPage/1' className={styles["nav-item"]}>
+                                <img style={{width: "100%", height: "200px"}} className={styles["image-estate"]} src={pic} />
+                            </Link>
                         </Carousel.Item>
                     ))
                     :
                     null
                     }
                 </Carousel>
-                    
                 </div>
                     <Link href='/estateDetail/1' className={styles["estate-name-container"]} >
                         <span className={styles["estate-name"]}>{estateName}</span> 
@@ -62,7 +63,7 @@ export const CardEstate = ({estateName,  estateSalesType, estatePictures, estate
                     
                     <span className={styles["estate-description"]}>{estateDescription}</span>
                     <span className={styles["estate-price"]}><span className={styles['price-simbol']}>$</span>{estatePrice}</span>
-                    <span className={styles['caracteristicas']}>Caracteristicas:</span>
+                    {/*<span className={styles['caracteristicas']}>Caracteristicas:</span>*/}
                     <div className={styles["estate-features"]}>
                         <div className={styles["estate-bedrooms"]}>
                             <div style={{fontSize: 20}} >{estateFeatures?.rooms}<FontAwesomeIcon icon={faBed} style={{ fontSize: 20, padding:"3px"}} /></div>

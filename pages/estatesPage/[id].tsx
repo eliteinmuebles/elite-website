@@ -181,9 +181,7 @@ const mockEstatesData = [
   ]
 
 
-export const estatesPage = () => {
-    const router = useRouter()
-    const { pid } = router.query
+export const estatesPage = () => { 
 
     const [info, setInfo] = useState([...mockEstatesData].slice(0,mockEstatesData.length));
    
@@ -195,12 +193,12 @@ export const estatesPage = () => {
     
   
     return (
-        <>
+      
         <Page>
             <div className={styles["estates-filter"]}>
                 <div className="row">
                 
-                    <div className={styles['category-filter-bar']} style={{marginBottom:"20px"}}>
+                  <div className={styles['category-filter-bar']} style={{marginBottom:"20px"}}>
 
                         <div>
                             <div className={styles['estate-item']}  style={{fontSize:15}}>
@@ -243,14 +241,14 @@ export const estatesPage = () => {
                             </div>
                         </div>
                         
-                    </div>
+                  </div>
                 
-                    <div className={styles['estates-container']}>
+                  <div className={styles['estates-container']}>
                         <div className="row">
                             {info.map((i:any) => (
                                 <div className="col">
                                   <CardEstate
-                                    width="420px"
+                                    width="380px"
                                     estatePictures={i.estatePictures}
                                     estateName={i.estateName}
                                     estateDescription={i.estateDescription}
@@ -268,7 +266,7 @@ export const estatesPage = () => {
                 </div>
             </div>
         </Page>
-        </>
+        
     )
 }
 

@@ -143,6 +143,7 @@
     font-weight: bold;
 }
 .estate-name-container{
+    text-align: center;
     text-decoration: none;
     color: rgb(37, 37, 37);
     font-weight: bold;
@@ -188,3 +189,14 @@
     border-left: black;
     
 }
+
+@media screen and (max-width: 1024px) {
+    .estate-card-container{
+        width: 100px;
+    }
+    
+  }
+
+  @media screen and (max-width: 768px) {
+   
+  }

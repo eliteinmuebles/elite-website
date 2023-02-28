@@ -1,0 +1,37 @@
+.market{
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 16px;  
+}
+
+.title{
+    color: #131176;
+    font-family: Montserrat, Roboto, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    line-height: 1.167;
+    margin-inline: 0.5rem;
+    padding: 8px;
+}
+
+.marketContainer:hover{
+    background-color: rgb(4, 4, 53);
+    color: white;
+}
+
+.marketContainer{
+    display: inline-block;
+    padding: 12px;
+    min-width: 250px;
+    border: 3px solid rgb(19, 17, 118);
+    color: rgb(19, 17, 118);
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s ease 0s;
+}
+
+.marketTitle{
+    color: inherit;
+}

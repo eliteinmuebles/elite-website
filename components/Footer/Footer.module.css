@@ -78,7 +78,12 @@
     display: table;
 }
 
-
+.socials{
+    width: 194px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
 
 
@@ -290,79 +295,48 @@ footer .widget ul {
 }
 .contact-title{
     color: white;
+    font-size: 20px;
 }
-.contact-form input, .contact-form textarea
-{
-  font-size: 16px;
-  padding: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  border: 3px solid #bbb;
-  line-height: 20px;
-  text-indent: 5px;
-  width: 80%;
-  display: block;
-  clear: both;
-  margin-bottom: 5px;
-  margin-inline: 0.5em;
-}
-.contact-form textarea
-{
-  height: 100px;
-}
-.contact-form button
-{
-  font-size: 16px;
-  padding: 8px 6px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  border: 0px solid #333;
-  line-height: 20px;
- 
-  display: block;
-  clear: both;
-  margin-bottom: 5px;
-  margin-inline: 0.5em;
-  background-color: #666;
-  color: #CCC;
-  cursor: pointer;
-}
-.contact-form button:hover, .contact-form button:focus
-{
-  outline: none;
-  background-color: #444;
-  color: #EEE;
-}
-.contact-form input:hover, .contact-form textarea:hover
-{
-  outline: none;
-  border-color: #AAA;
-}
-.contact-form input:focus, .contact-form textarea:focus
-{
-  outline: none;
-  border-color: #888;
-}
-  
-.form-group{
-    margin-bottom: 8px;
-}
-
 .contact-btn{
     margin-inline: 0.5em;
     border-radius: 5px;
-    background-color: #053a74;
+    background-color: rgba(0, 0, 0, 0.568);
     color: white;
     font-weight: bold;
     border: 1px solid black;
     text-align: center;
     padding: 6px;
+    margin-inline: 1.6rem;
 }
-
 
 .contact-btn:hover{
-   
     color: black;
+    background-color:#2747bbcc ;
 }
+
+@media screen and (max-width: 1440px) {
+   
+}
+
+@media screen and (max-width: 1024px) {
+  
+}
+
+@media screen and (max-width: 768px) {
+ 
+  }
+
+@media screen and (max-width: 430px) {
+ 
+  
+  }
+
+@media screen and (max-width: 390px) {
+ .footer{
+    width: 435px;
+ }
+  }
+
+@media screen and (max-width: 330px) {
+    
+  }

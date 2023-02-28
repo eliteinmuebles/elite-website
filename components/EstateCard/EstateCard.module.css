@@ -1,0 +1,139 @@
+.estateCardContainer{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #212529;
+    border-radius: 16px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 0px 8px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border: 1px solid gray;
+}
+
+.containerImage{
+    display: flex;
+    flex-direction: column;
+    position: relative;   
+}
+
+.containerImage:hover {
+    opacity: 0.8;
+    background-color: #212529;
+    border-radius: 16px;
+}
+
+.containerImage:hover .imageOverlay{
+    opacity: 0.9;
+    position: absolute;
+	top: 55%;
+	color: white;
+	text-align: center;
+	transition: .4s;
+    border-radius: 16px;
+}
+
+.containerImage:hover .estateLocation{
+    display: none;
+  /*  position: absolute;
+	top: 30%;
+	color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+	text-align: center;
+	transition: .4s ease;
+   text-align: center;*/
+}
+
+.estateLocation1{
+    font-weight: bold;
+    font-size: 25px;
+    color: white;    
+}
+
+.imageOverlay{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.estateLocation{
+    position: absolute;
+    color: white;
+    bottom: 1px;
+    left: 50%;
+    transform: translate(-50%, 18%);
+    padding: 8px;
+    opacity: 0.8;
+    background-color: #212529;
+    line-height: 15px;
+    padding-bottom: 0px;
+    width: 100%;
+    height: 50px;
+    text-align: center; 
+}
+
+.estateImage{
+   border-top-right-radius: 16px;
+   border-top-left-radius: 16px;
+    position: relative;
+}
+
+.estateLocation{
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+
+.estatePrice{
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.agentName{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.agentPhone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 3px;
+}
+
+.phone:hover{
+    text-decoration: underline;
+    color: white;
+    padding: 3px;
+}
+
+.email{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 3px;
+}
+
+.email:hover{
+    text-decoration: underline;
+    color: white;
+    padding: 3px;
+}

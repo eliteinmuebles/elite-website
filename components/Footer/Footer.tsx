@@ -1,5 +1,9 @@
 import styles from "./Footer.module.css"
 import cn from "classnames"
+import { Modal } from "react-bootstrap";
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faPhone,
@@ -12,6 +16,11 @@ import{
 }  from '@fortawesome/free-brands-svg-icons'
 
 export const Footer = () => {
+  
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
     return (
         <div className={styles["footer"]}>
           
@@ -183,7 +192,7 @@ export const Footer = () => {
                           <div className={styles["gem-contacts-phone"]} style={{color:"white"}}><FontAwesomeIcon icon={faPhone} style={{ fontSize: 15, padding:"3px"}} /> <a href="#" style={{color:"white", textDecoration:"transparent"}}>+58-4144092789</a></div>
                           <div className={styles["gem-contacts-phone"]}><FontAwesomeIcon icon={faEnvelope} style={{ fontSize: 15, padding:"3px"}} /> <a href="#" style={{color:"white", textDecoration:"transparent"}}>elite@gmail.com</a></div>
 
-                          <div id="footer-socials">
+                          <div className={styles["footer-socials"]}>
                             <div className={cn({
                               [styles["socials"]]:true,
                               [styles["inline-inside"]]:true, 
@@ -211,16 +220,45 @@ export const Footer = () => {
                       
                       <h5 className={styles["footer-title"]}>Email Us</h5>
                       
-                      <form className={styles["form-comtact-us"]}>
-                        <h4 className={styles["contact-title"]}>¿Tienes alguna consulta?</h4>
-                        <div className={styles["form-group"]}>
-                          <input type="email" className={styles["form-control"]} id="exampleInputEmail1"  placeholder="Enter email"/>
-                        </div>
-                        <div className={styles["form-group"]}>
-                          <textarea id="subject" name="subject" placeholder="Write something.." style={{height: "100px"}}></textarea>
-                        </div>
-                        <button type="submit" className={styles["contact-btn"]}>Contactar</button>
-                      </form>
+                      <form action="#" className={styles["contact-form"]}>
+                                <h1 className={styles["contact-title"]}>¿Tienes alguna consulta?</h1>
+                                <Button variant="primary" onClick={handleShow} className={styles['contact-btn']}>
+                                    Quiero ser contactado
+                                </Button>
+
+                                <Modal show={show} onHide={handleClose}>
+                                    <Modal.Header closeButton>
+                                    <Modal.Title>Hola! Ayudanos a contactarte: </Modal.Title>
+                                    </Modal.Header>
+                                    <Modal.Body>
+                                    <Form>
+                                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                        <Form.Label>Correo Electronico</Form.Label>
+                                        <Form.Control
+                                            type="email"
+                                            placeholder="name@example.com"
+                                            autoFocus
+                                        />
+                                        </Form.Group>
+                                        <Form.Group
+                                        className="mb-3"
+                                        controlId="exampleForm.ControlTextarea1"
+                                        >
+                                        <Form.Label>Dejanos tu duda</Form.Label>
+                                        <Form.Control as="textarea" rows={3} />
+                                        </Form.Group>
+                                    </Form>
+                                    </Modal.Body>
+                                    <Modal.Footer>
+                                    <Button variant="secondary" onClick={handleClose}>
+                                        Cerrar
+                                    </Button>
+                                    <Button variant="primary" onClick={handleClose}>
+                                        Enviar
+                                    </Button>
+                                    </Modal.Footer>
+                                </Modal>
+                              </form>
                           
                     </div>
                   </div>

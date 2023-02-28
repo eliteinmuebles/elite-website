@@ -1,10 +1,14 @@
-
+.container-content{
+    display: grid;
+    place-items: center;
+    position: absolute;
+}
 .search-container{
     background:black;
     background-color: #333;
     background-size: cover;
     background-position: center;
-    height: 400px;
+    height: 350px;
     padding: 0 0 20px;
     font-family: 'Montserrat', sans-serif;
     padding-top:30px;
@@ -46,17 +50,87 @@
     text-decoration: none;
     color: white;
     font-weight: bold;
+    font-size: 23px;
 }
 
-.link{
+
+.nav-item{
+    padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+    font-size: var(--bs-nav-link-font-size);
+    font-weight: var(--bs-nav-link-font-weight);
+    color: var(--bs-nav-link-color);
     text-decoration: none;
-    color: white;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
     font-weight: bold;
-   padding: 20px;
+    margin: 10px;
+   
 }
 
-.link:hover{
-    text-decoration:3px underline  goldenrod;
-   color: white;
+.nav-item:hover{
+    color: #ffffffc2;
 }
 
+@media screen and (max-width: 1440px) {
+   
+    
+  }
+  
+  @media screen and (max-width: 1024px) {
+   .search-container{
+    width: 100%;
+   }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .search-container{
+      width: 780px;
+    }
+    }
+  
+    @media screen and (max-width: 430px) {
+     .title-search{
+        font-size: 22px;
+     }
+     .short-description{
+        font-size: 14px;
+     }
+     .search-container{
+        height:200px;
+        width: 440px;
+     }
+      .header-bg{
+        width: 100%;
+      }
+      .search-links{
+        font-size: 20px;
+      }
+      
+    }
+  
+    @media screen and (max-width: 380px) {
+        .title-search{
+            font-size: 25px;
+         }
+         .short-description{
+            font-size: 13px;
+         }
+
+         .search-container{
+            height:200px;
+            width: 435px;
+         }
+          .header-bg{
+            width: 100%;
+          }
+      
+    }
+
+  
+    @media screen and (max-width: 330px) {
+      .search-container{
+        width: 435px;
+      }
+    }
+
+  
+  

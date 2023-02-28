@@ -5,35 +5,71 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
+import Dropdown from 'react-bootstrap/Dropdown';
+import Nav from 'react-bootstrap/Nav';
 
 export const Header = () => {
-
+    
     const [show, setShow] = useState(false);
-
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-
-
     return (
     <>
-    <div className="main-header" style={{height: "70px"}}>
+    <div className="main-header" >
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"  style={{height: "70px"}}>
             <div className="container">
                 <Link href='/' className={styles["nav-item"]}>
-                    <img src="/images/logo.jpg" className={styles["logo-elite"]} width="50" height="30" alt=""/>     
+                   {/*} <img src="/images/logo.jpg" className={styles["logo-elite"]} width="50" height="30" alt=""/>    */}
+                   
                 </Link>
             
             {/*<a className={styles["title-elite"]} href="#">GRUPO ELITE</a>*/}
-            <button className="navbar-toggler" type="button"  data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-            </button>
+           
+           
+          {/*  <button className="navbar-toggler" type="button"  data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button> */}
+               
+             
+               
+                <Dropdown className={styles["drop"]}>
+                    <Dropdown.Toggle variant="success" id="dropdown-basic" className={styles["drop"]}>
+                        <span className="navbar-toggler-icon"></span>
+                    </Dropdown.Toggle>
+
+                    <Dropdown.Menu>
+                        <Dropdown.Item href="#/action-1">
+                            <Link href='/' className={styles["nav-item"]}>
+                                Inicio
+                            </Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item>
+                            <Link href='/estatesPage/1' className={styles["nav-item"]}>
+                                Comprar
+                            </Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item>
+                            
+                        </Dropdown.Item>
+                        <Dropdown.Item>
+                           
+                        </Dropdown.Item>
+                    </Dropdown.Menu>
+                </Dropdown>
+                
+             
+            
+           
             <div className="collapse navbar-collapse" id="navbarResponsive">
                 
                 <ul className="navbar-nav">
                     {/*} <li className="nav-item active">
                         <a className="nav-link fw-bold" href="#">Inicio</a>
                         </li>*/}
+                    <li className="nav-item " aria-controls="navbarResponsive">
+                        <Link href='/' className={styles["nav-item"]}>
+                            Inicio
+                        </Link>
+                    </li>
                     <li className="nav-item ">
                         <Link href='/estatesPage/1' className={styles["nav-item"]}>
                              Comprar

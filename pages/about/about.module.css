@@ -5,10 +5,12 @@
     padding-top: 40px;
     padding-inline: 80px;
     font-family: 'Montserrat', sans-serif;
+    
 }
 .estate-description-container{
     margin: 20px;
     font-weight: bold;
+     
 }
 
 /*para estilizar el box-about-us*/
@@ -32,16 +34,6 @@
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
-.about-us-img-top{
-    position: absolute;
-    margin-top: 10px;
-    background: rgba(10, 81, 214, 0.5);
-    font-weight: 900;
-    font-size: 30px;
-    top: 139px;
-    left: 90px;
-    
-}
 
 .text-about-us{
     font-size: 15px;
@@ -65,7 +57,10 @@
     padding: 8px;
 }
 
-
+.socials-item{
+    font-size: 30px;
+    padding: 3px;
+}
 
 
 
@@ -256,69 +251,6 @@
 }
 
 
-
-.contact-form input, .contact-form textarea
-{
-  font-size: 16px;
-  padding: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  border: 3px solid #bbb;
-  line-height: 20px;
-  text-indent: 5px;
-  width: 100%;
-  display: block;
-  clear: both;
-  margin-bottom: 5px;
-  margin-inline: 0.5em;
-}
-.contact-form textarea
-{
-  height: 100px;
-}
-
-
-.contact-form input:hover, .contact-form textarea:hover
-{
-  outline: none;
-  border-color: #AAA;
-}
-.contact-form input:focus, .contact-form textarea:focus
-{
-  outline: none;
-  border-color: #888;
-}
-
-.facebook {
-    color: #4e64b5;
-    
-}
-
-.twitter {
-    
-}
-.instagram {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-    -webkit-background-clip: text;
-            /* Also define standard property for compatibility */
-            background-clip: text;
-    -webkit-text-fill-color: transparent;
-    
-     /* change this to change the size*/
-    
-}
-.youtube {
-    color: red;
-}
-
-.telegram {
-    color:  #0088cc;
-}
-
-.title-estates{
-    margin-bottom: 24px;
-}
   
         
 .contact-btn{
@@ -337,7 +269,59 @@
     color: black;
     background-color:#2747bbcc ;
 }
-      
+  
+
+@media screen and (max-width: 768px) {
+
+    .about-us-img-top{
+        translate: 15vh 10vh;
+        text-align: center;
+        width: 300px;
+        font-size: 25px;
+    }
+   .socials-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 7px;
+    
+   }
+
+   .socials-item{
+    font-size: 30px;
+   }
+
+   .name-top{
+    font-size: 20px;
+    font-weight: bold;
+   }
+   .contact-me-rol{
+    display: none;
+   }
+   
+  }
   
     
-  
+/*header*/
+
+ .about-container{
+    margin: 30px auto 30px auto;
+    
+    border: solid 1px black;
+    background-image: url("/images/apart1.jpg");
+ }
+
+ .img-about{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+ }
+
+ .about-content{
+    width: 200px;
+    height: 200px;
+    margin: 20px 0 30px 60px;
+    border: solid 1px black;
+    color: #FFF;
+ }

@@ -6,12 +6,14 @@ interface CardBlogProps {
     blogDescription ?: string,
     imageBlog ?: string
     datePost ?: string
+    width?: string,
+    heigth?: string
 }
 
-export const CardBlog = ({blogTitle, blogDescription, imageBlog, datePost}: CardBlogProps) => {
+export const CardBlog = ({blogTitle, blogDescription, imageBlog, datePost, width, heigth}: CardBlogProps) => {
     return (
         <>
-        <div className={styles["blogContainer"]}>
+        <div className={styles["blogContainer"]} style={{width: width? width: "", height: heigth? heigth:""}}>
             
                 <img style={{width: "100%", }} className={styles["blogImage"]} src={imageBlog} />
                 <div className={styles["blogDate"]}>
