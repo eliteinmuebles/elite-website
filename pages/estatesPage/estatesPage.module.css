@@ -4,15 +4,14 @@
     padding-top: 20px;
     padding-inline: 20px;
     font-family: 'Montserrat', sans-serif;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     
 }
 
 .category-filter-bar{
-    
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    gap: 20px;
     align-items: center;
     justify-content: center;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
@@ -25,17 +24,14 @@
     align-items: center;
     justify-content: center;
     gap: 5px;
-    padding: 6px;
     cursor: pointer;
     font-weight: bold;
-    
     color: grey;
-    padding: 8px;
 }
 
 
 .estate-item:hover{
-    color: black;
+    color: #252925;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
 }
 
@@ -55,4 +51,23 @@
     
 }
 
+.input{
+    width: 50%;
+}
 
+.filter-btn{
+    border-radius: 5px;
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 8px;
+    margin-inline: 1.6rem;
+   margin-bottom: 12px;
+   padding: 9px;
+}
+
+ .filter-btn:hover{
+    color: white;
+    background-color:#252925;
+}

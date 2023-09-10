@@ -8,7 +8,7 @@
     background-color: #333;
     background-size: cover;
     background-position: center;
-    height: 350px;
+    height: 50%;
     padding: 0 0 20px;
     font-family: 'Montserrat', sans-serif;
     padding-top:30px;
@@ -16,6 +16,11 @@
     position: relative;
 }
 
+.comtainer-content{
+  margin-top: 20px;
+  display: grid;
+  place-items: center;
+}
 
 .header-bg{
     opacity: .4;
@@ -33,15 +38,17 @@
 
 
 .title-search{
+    color: rgb(223, 220, 220);
     text-align: center;
     font-size: 40px;
-    color: white;
+   font-family: 'Playfair Display';
     font-weight: bold;
 }
 
 .short-description{
+    color: rgba(255,255,255,.55);
+    font-weight: bold;
     text-align: center;
-    color: white;
     padding-bottom: 10px;
 }
 
@@ -67,7 +74,7 @@
 }
 
 .nav-item:hover{
-    color: #ffffffc2;
+    color: #B99875;
 }
 
 @media screen and (max-width: 1440px) {

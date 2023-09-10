@@ -3,12 +3,13 @@
     display: flex;
     flex-direction: row;
     gap: 20px;
-    padding: 16px;  
+    padding: 20px;  
+    
 }
 
 .title{
-    color: #131176;
-    font-family: Montserrat, Roboto, Helvetica, Arial, sans-serif;
+    color: #4C1816;
+    font-family: 'Playfair Display';
     font-weight: bold;
     line-height: 1.167;
     margin-inline: 0.5rem;
@@ -16,7 +17,7 @@
 }
 
 .marketContainer:hover{
-    background-color: rgb(4, 4, 53);
+    background-color: #4C1816;
     color: white;
 }
 
@@ -24,12 +25,13 @@
     display: inline-block;
     padding: 12px;
     min-width: 250px;
-    border: 3px solid rgb(19, 17, 118);
-    color: rgb(19, 17, 118);
+    border: 3px solid #4C1816;
+    color: #4C1816;
     text-align: center;
     cursor: pointer;
     user-select: none;
     transition: all 0.2s ease 0s;
+    margin-inline: 0.8rem;
 }
 
 .marketTitle{

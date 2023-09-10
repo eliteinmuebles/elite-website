@@ -85,7 +85,7 @@ const mockAgentData = [
 export const AgentSlider = () => {
     
     const screen = useWindowSize()
-    const [cardEstateWidth, setCardEstateWidth] = useState("280px")
+    const [cardEstateWidth, setCardEstateWidth] = useState("300px")
 
     useEffect(() => {
         if (screen && screen.width? screen.width <= 576 : null) {
@@ -96,7 +96,6 @@ export const AgentSlider = () => {
         };
         if (screen && screen.width? screen.width < 800 && screen.width > 500   : null) {
           setCardEstateWidth("290px")
-         
         };
         if (screen && screen.width? screen.width >= 1200   : null) {
          
@@ -105,14 +104,15 @@ export const AgentSlider = () => {
        }, [screen])
     return (
         <>
-         <div style={{backgroundColor: "#383636"}}>
-            <h1 className="agent-title">Agentes</h1>
+         <div style={{backgroundColor: "#383636"}} className={styles['agents-slider']}>
+            <h1 className={styles["agent-title"]}>Nuestro equipo</h1>
                 <Carousel>
                 {mockAgentData.map((agents, index) => (
                     <Carousel.Item key={`agents-${index}`}>
                         <div className="d-flex flex-row justify-content-center align-items-center gap-5">
                             {agents.map((agent)=> (
                                 <CardAgent
+                                    key={agent.id}
                                     width={cardEstateWidth}
                                     agentName={agent.agentName}
                                     agentLastName={agent.agentLastName}

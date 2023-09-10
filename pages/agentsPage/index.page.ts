@@ -1,0 +1,1 @@
+export {agentsPage as default} from "."

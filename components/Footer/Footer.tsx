@@ -1,4 +1,5 @@
 import styles from "./Footer.module.css"
+import Link from "next/link";
 import cn from "classnames"
 import { Modal } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
@@ -14,12 +15,26 @@ import{
   faInstagram,
   faTiktok
 }  from '@fortawesome/free-brands-svg-icons'
+import { useModalStore } from "../../store";
+import { ContactUs } from "../Modal/ContactUs/ContactUs";
+
+const cities = ["Valencia", "Naguanagua", "Vina", "Parral", "Trigal", "San Diego"];
 
 export const Footer = () => {
+
+  const { setShow } = useModalStore();
   
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const cityList = cities.map((city) => (
+    <li >
+        <div >
+          <Link href='/about' className={styles["nav-item"]} >
+            {city}
+          </Link>
+        </div>
+       
+    </li>
+  ));
+  
 
     return (
         <div className={styles["footer"]}>
@@ -46,8 +61,9 @@ export const Footer = () => {
                       }>
                         <div className={styles["gem-pp-posts-text"]}>
                           <div className={styles["gem-pp-posts-item"]}>
-                            <a  style={{color: "white"}} href="#">ABOUT
-                            </a>
+                          <Link href='/about' className={styles["nav-item"]} >
+                             Conócenos
+                          </Link>
                           </div>
                           <div className={styles["posts-date"]}></div>
                         </div>
@@ -55,8 +71,9 @@ export const Footer = () => {
                       <li className="clearfix gem-pp-posts">
                         <div className={styles["gem-pp-posts-text"]}>
                           <div className={styles["gem-pp-posts-item"]}>
-                            <a style={{color: "white"}} href="#">REAL ESTATE
-                            </a>
+                          <Link href='/estatesPage/1' className={styles["nav-item"]}>
+                                Comprar
+                            </Link>
                           </div>
                           <div className={styles["posts-date"]}></div>
                         </div>
@@ -64,8 +81,10 @@ export const Footer = () => {
                       <li className="clearfix gem-pp-posts">
                         <div className={styles["gem-pp-posts-text"]}>
                           <div className={styles["gem-pp-posts-item"]}>
-                            <a style={{color: "white"}} href="#">BUY
-                            </a>
+                          <Link href='#'  className={styles["nav-item"]} onClick={() =>  setShow(true)}>
+                             Vender
+                          </Link>
+                          <ContactUs/>
                           </div>
                           <div className={styles["posts-date"]}></div>
                         </div>
@@ -73,21 +92,14 @@ export const Footer = () => {
                       <li className="clearfix gem-pp-posts">
                         <div className={styles["gem-pp-posts-text"]}>
                           <div className={styles["gem-pp-posts-item"]}>
-                            <a  href="#">RENT
-                            </a>
+                          <Link href='/estatesPage/1' className={styles["nav-item"]}>
+                                Alquilar
+                          </Link>
                           </div>
                           <div className={styles["posts-date"]}></div>
                         </div>
                       </li>
-                      <li className="clearfix gem-pp-posts">
-                        <div className={styles["gem-pp-posts-text"]}>
-                          <div className={styles["gem-pp-posts-item"]}>
-                            <a  href="#">SELL
-                            </a>
-                          </div>
-                          <div className={styles["posts-date"]}></div>
-                        </div>
-                      </li>
+                    
 
                     </ul>
                   </div>
@@ -95,82 +107,10 @@ export const Footer = () => {
                 </div>
                       
                 <div className="col-lg-2 col-md-12 col-sm-12 footer-col-3">
-                  <div className={styles["widget"]}>
-                    <h5 className={styles["footer-title"]}>Regions</h5>
-                    <ul className={styles["posts"]} style={{listStyle: "none", paddingLeft: 0}}>
-                      <li className={cn({
-                        [styles["clearfix"]]:true,
-                         [styles["gem-pp-posts"]]:true
-                      })}>
-                        <div className={styles["gem-pp-posts-text"]}>
-                          <div className={styles["gem-pp-posts-item"]}>
-                            <a  href="#">CALIFORNIA
-                            </a>
-                          </div>
-                          <div className={styles["posts-date"]}></div>
-                        </div>
-                      </li>
-                      <li className={cn({
-                        [styles["clearfix"]]: true, 
-                        [styles["gem-pp-posts"]]: true
-                      })}>
-                        <div className={styles["gem-pp-posts-text"]}>
-                          <div className={styles["gem-pp-posts-item"]}>
-                            <a href="#">FLORIDA
-                            </a>
-                          </div>
-                          <div className={styles["posts-date"]}></div>
-                        </div>
-                      </li>
-                      <li className={cn({
-                        [styles["clearfix"]]: true, 
-                        [styles["gem-pp-posts"]]: true
-                      })}>
-                        <div className={styles["gem-pp-posts-text"]}>
-                          <div className={styles["gem-pp-posts-item"]}>
-                            <a href="#">WASHINGTON
-                            </a>
-                          </div>
-                          <div className={styles["posts-date"]}></div>
-                        </div>
-                      </li>
-                      <li className={cn({
-                        [styles["clearfix"]]: true, 
-                        [styles["gem-pp-posts"]]: true
-                      })}>
-                        <div className={styles["gem-pp-posts-text"]}>
-                          <div className={styles["gem-pp-posts-item"]}>
-                            <a href="#">NEBRASKA
-                            </a>
-                          </div>
-                          <div className={styles["posts-date"]}></div>
-                        </div>
-                      </li>
-                      <li className={cn({
-                        [styles["clearfix"]]: true, 
-                        [styles["gem-pp-posts"]]: true
-                      })}>
-                        <div className={styles["gem-pp-posts-text"]}>
-                          <div className={styles["gem-pp-posts-item"]}>
-                            <a  href="#">BOSTON
-                            </a>
-                          </div>
-                          <div className={styles["posts-date"]}></div>
-                        </div>
-                      </li>
-                      <li className={cn({
-                        [styles["clearfix"]]: true, 
-                        [styles["gem-pp-posts"]]: true
-                      })}>
-                        <div className={styles["gem-pp-posts-text"]}>
-                          <div className={styles["gem-pp-posts-item"]}>
-                            <a href="#">NEW YORK
-                            </a>
-                          </div>
-                          <div className={styles["posts-date"]}></div>
-                        </div>
-                      </li>
-
+                  <div >
+                    <h5 className={styles["footer-title"]}>Market</h5>
+                    <ul className={styles["posts"]} style={{ listStyle: "none", paddingLeft: 0 }}>
+                      {cityList}
                     </ul>
                   </div>
     
@@ -181,16 +121,17 @@ export const Footer = () => {
                       <div className={styles["widget"]}>
                         <h5 className={styles["footer-title"]}>Direccion</h5>
                         <div className={styles["gem-contacts"]}>
-                          <div className={styles["gem-contacts-item gem-contacts-address"]}>Oficina Coorpotativa:Centro Comercial Garibaldi
-                            Calle 121, Valencia. Carabobo
+                          <div style={{fontSize:"13px", color: "white"}}>
+                            Oficina Coorpotativa: Centro Comercial Vina Plaza
+                            , Valencia. Carabobo
                             Piso 1 Oficina 32 
                           </div>
                          
                           <h5 className={cn({
                             [styles["footer-title"]]:true,
                             [styles["contact"]]:true })} style={{marginTop: "10px"}}>Contactanos</h5>
-                          <div className={styles["gem-contacts-phone"]} style={{color:"white"}}><FontAwesomeIcon icon={faPhone} style={{ fontSize: 15, padding:"3px"}} /> <a href="#" style={{color:"white", textDecoration:"transparent"}}>+58-4144092789</a></div>
-                          <div className={styles["gem-contacts-phone"]}><FontAwesomeIcon icon={faEnvelope} style={{ fontSize: 15, padding:"3px"}} /> <a href="#" style={{color:"white", textDecoration:"transparent"}}>elite@gmail.com</a></div>
+                          <div  style={{color:"white"}}><FontAwesomeIcon icon={faPhone} style={{ fontSize: 15, padding:"3px"}} /> <a href="#" style={{color:"white", textDecoration:"transparent"}}>+58-4144092789</a></div>
+                          <div  style={{color:"white"}}><FontAwesomeIcon icon={faEnvelope} style={{ fontSize: 15, padding:"3px"}} /> <a href="#" style={{color:"white", textDecoration:"transparent"}}>elite@gmail.com</a></div>
 
                           <div className={styles["footer-socials"]}>
                             <div className={cn({
@@ -222,42 +163,11 @@ export const Footer = () => {
                       
                       <form action="#" className={styles["contact-form"]}>
                                 <h1 className={styles["contact-title"]}>¿Tienes alguna consulta?</h1>
-                                <Button variant="primary" onClick={handleShow} className={styles['contact-btn']}>
-                                    Quiero ser contactado
+                                <Button variant="primary" className={styles['contact-btn']} onClick={() =>  setShow(true)}>
+                                    Contactanos
                                 </Button>
-
-                                <Modal show={show} onHide={handleClose}>
-                                    <Modal.Header closeButton>
-                                    <Modal.Title>Hola! Ayudanos a contactarte: </Modal.Title>
-                                    </Modal.Header>
-                                    <Modal.Body>
-                                    <Form>
-                                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                        <Form.Label>Correo Electronico</Form.Label>
-                                        <Form.Control
-                                            type="email"
-                                            placeholder="name@example.com"
-                                            autoFocus
-                                        />
-                                        </Form.Group>
-                                        <Form.Group
-                                        className="mb-3"
-                                        controlId="exampleForm.ControlTextarea1"
-                                        >
-                                        <Form.Label>Dejanos tu duda</Form.Label>
-                                        <Form.Control as="textarea" rows={3} />
-                                        </Form.Group>
-                                    </Form>
-                                    </Modal.Body>
-                                    <Modal.Footer>
-                                    <Button variant="secondary" onClick={handleClose}>
-                                        Cerrar
-                                    </Button>
-                                    <Button variant="primary" onClick={handleClose}>
-                                        Enviar
-                                    </Button>
-                                    </Modal.Footer>
-                                </Modal>
+                                <ContactUs/>
+                               
                               </form>
                           
                     </div>

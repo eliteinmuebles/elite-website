@@ -1,25 +1,44 @@
 import styles from './Market.module.css'
+import Link from 'next/link'
+
+const mockMarketData = [
+    {
+        marketCity: "Valencia"
+    },
+    {
+        marketCity: "Trigal"
+    },
+    {
+        marketCity: "Naguanagua"
+    },
+    {
+        marketCity: "San Diego"
+    },
+    {
+        marketCity: "Trigalena"
+    },
+    {
+        marketCity: "Guataparo"
+    },
+    {
+        marketCity: "Prebo"
+    },
+]
 
 export const Market = () => {
     return (
         <>
         <h1 className={styles['title']}>Market</h1>
         <div className={styles["market"]}>
-            <div className={styles["marketContainer"]}>
-                <h3 className={styles["marketTitle"]}>Valencia</h3>
+            {mockMarketData.map((city, index) => (
+            <Link href='/estatesPage/1'>
+            <div  key={`market-key-${index}`} className={styles["marketContainer"]}>
+                 <h4  className={styles["marketTitle"]}>
+                    {city.marketCity}
+                </h4>
             </div>
-            <div className={styles["marketContainer"]}>
-                <h3 className={styles["marketTitle"]}>Valencia</h3>
-            </div>
-            <div className={styles["marketContainer"]}>
-                <h3 className={styles["marketTitle"]}>Valencia</h3>
-            </div>
-            <div className={styles["marketContainer"]}>
-                <h3 className={styles["marketTitle"]}>Valencia</h3>
-            </div>
-            <div className={styles["marketContainer"]}>
-                <h3 className={styles["marketTitle"]}>Valencia</h3>
-            </div>
+            </Link>
+            ))}
         </div>
         </>
     )

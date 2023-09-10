@@ -1,0 +1,22 @@
+.container-reviews{ 
+    padding: 20px;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 10%) 0px 0px 8px 8px;
+    margin:10px;
+   
+}
+
+
+.titleReview{
+    font-weight: bold;
+    font-family: 'Playfair Display';
+    text-align: left;
+    font-size: 30px;
+    color:  #4C1816; 
+    margin-bottom: 1rem;
+    text-decoration: none;
+}
+
+.titleReview:hover{
+   color:  #4C1816;
+}

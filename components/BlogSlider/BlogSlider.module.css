@@ -9,15 +9,21 @@
 
 .titleBlog{
     font-weight: bold;
+    font-family: 'Playfair Display';
     text-align: left;
     font-size: 30px;
-    text-shadow: 1.5px 2px #b1adad;
-    color: #212529;
+    color:  #4C1816; 
+    margin-bottom: 1rem;
+    text-decoration: none;
+}
+
+.titleBlog:hover{
+   color:  #4C1816;
 }
 
 @media screen and (max-width: 1440px) {
    .containerBlog{
-      height: 500px;
+      height: 350px;
       margin: 12px;
    }
    }

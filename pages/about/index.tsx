@@ -28,17 +28,15 @@ export const about = () => {
                 <div className="container-fluid px-5">
                     <div className="row">
                         <div className="col-6">
-                            <img src="/images/agentes.avif" className={styles["img-about"]} alt="" />
+                            <img src="/images/logo.jpg" className={styles["img-about"]} alt="" />
                         </div>
-                        <div className="col-6">
+                       <div className="col-6">
                             <div className={styles["about-content"]}>
-                                <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, at.</h1>
+                             
                             </div>
-                        </div>
+                        </div> 
                     </div>
-                </div>
-               
-                
+                </div>  
            </header>
 
             <div className={styles["container-about-us"]}>

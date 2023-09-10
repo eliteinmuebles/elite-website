@@ -2,10 +2,10 @@
 
 
 .container-about-us{
-    padding-top: 40px;
+    padding-top: 60px;
     padding-inline: 80px;
     font-family: 'Montserrat', sans-serif;
-    
+    background-color: #fff;
 }
 .estate-description-container{
     margin: 20px;
@@ -27,10 +27,8 @@
 
 .about-us-img{
     position: relative;
-   
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
@@ -130,7 +128,7 @@
 
 .contact-me-box{
     position: sticky;
-    top:75px;
+    top:25px;
     margin-bottom: 15px;
 }
 
@@ -279,12 +277,12 @@
         width: 300px;
         font-size: 25px;
     }
+
    .socials-box{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 7px;
-    
    }
 
    .socials-item{
@@ -305,23 +303,22 @@
 /*header*/
 
  .about-container{
-    margin: 30px auto 30px auto;
-    
     border: solid 1px black;
-    background-image: url("/images/apart1.jpg");
+    background-image: url("https://www.fynsa.com/wp-content/uploads/2021/07/iStock-1282624945-791x307.jpg");
+    height: 270px;
  }
 
  .img-about{
-    position: absolute;
+   margin-top: 5px;
     width: 400px;
     height: 300px;
      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+     border-radius: 5px;
  }
 
  .about-content{
     width: 200px;
     height: 200px;
     margin: 20px 0 30px 60px;
-    border: solid 1px black;
     color: #FFF;
  }

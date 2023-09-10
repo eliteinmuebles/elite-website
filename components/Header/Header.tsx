@@ -7,6 +7,11 @@ import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Nav from 'react-bootstrap/Nav';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faHouseUser
+  } from "@fortawesome/free-solid-svg-icons";
+
 
 export const Header = () => {
     
@@ -61,13 +66,14 @@ export const Header = () => {
            
             <div className="collapse navbar-collapse" id="navbarResponsive">
                 
-                <ul className="navbar-nav">
+                <ul className="navbar-nav" style={{display:"flex", alignItems:"center"}}>
                     {/*} <li className="nav-item active">
                         <a className="nav-link fw-bold" href="#">Inicio</a>
                         </li>*/}
                     <li className="nav-item " aria-controls="navbarResponsive">
                         <Link href='/' className={styles["nav-item"]}>
-                            Inicio
+                            <img className={styles["logo-header"]}  src="/images/logo.jpg" alt=""/> 
+                            {/* <FontAwesomeIcon icon={faHouseUser} size="xl" className={styles["icon-header"]}/> */}
                         </Link>
                     </li>
                     <li className="nav-item ">
@@ -76,12 +82,12 @@ export const Header = () => {
                         </Link>
                     </li>
                     <li className="nav-item active">
-                        <a href='#' className={styles["nav-item"]}>
+                        <Button variant="primary" onClick={handleShow} className={styles['btn-modal']}>
                             Vender
-                        </a>
+                        </Button>
                     </li>
                     <li className="nav-item active">
-                        <a href='#' className={styles["nav-item"]}>
+                        <a href='/estatesPage/2' className={styles["nav-item"]}>
                             Alquilar
                         </a>
                     </li>
@@ -92,7 +98,7 @@ export const Header = () => {
                 <ul className="navbar-nav ms-auto">
                     <li className="nav-item active">
                         <Link href='/about' className={styles["nav-item"]}>
-                            Sobre Nosotros!
+                        Conócenos
                         </Link>
                     </li>
                     {/*<li className="nav-item dropdown">

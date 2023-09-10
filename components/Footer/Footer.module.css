@@ -3,7 +3,6 @@
     background-size: cover;
     background-position: center;
     background-image:  linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../../public/images/citys2.webp");
-    padding: 0 0 20px;
     font-family: 'Montserrat', sans-serif;
     padding-top:30px;
     overflow: hidden;
@@ -134,6 +133,21 @@ a.socials-item {
 .footer-bottom a:hover {
     color: white;
 }
+.nav-item{
+    display: block;
+    padding:5px;
+    font-size: var(--bs-nav-link-font-size);
+    font-weight: var(--bs-nav-link-font-weight);
+    color: white;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    font-weight: bold;
+   
+}
+
+.nav-item:hover{
+    color: #ffffffc2;
+}
 
 
 
@@ -178,37 +192,10 @@ a.socials-item {
     position: relative;
 }
 
-.gem-contacts-item {
-    padding-top: 10px;
-    font-size: 0.938vw;
-    font-weight: 900;
-    color: white;
-}
-.gem-contacts-item a{
-    text-decoration: transparent;
-    font-weight:bold;
-    color: white;
-    margin-left: 2px;
-}
-
-.gem-contacts-phone{
-    color: white;
-    display: flex;
-    align-items: center;
-
-}
-
-.gem-contacts-item i {
-    color: white;
-    padding-right: 5px;
-}
-
-.gem-contacts{
-    color: white;
-}
 
 
-.posts li {
+
+.list li {
     /*border-bottom: 1px solid #393d50;*/
     color: white;
     padding-bottom: 12px;
@@ -220,21 +207,8 @@ a.socials-item {
 
 
 
-.gem-pp-posts-item{
-    cursor: pointer;
-}
 
-.gem-pp-posts-item a{
-    font-size: 13px;
-    font-weight: 800;
-    color: white;
-    text-decoration: transparent;
-}
 
-.posts-date {
-    color: black;
-    font-size: 89.5%;
-}
 
 
 
@@ -250,20 +224,6 @@ footer .widget ul {
     display: table;
 }
 
-.widget_gallery li {
-    display: inline-block;
-    width: 33.33%;
-    float: left;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    padding: 2px;
-}
-
-.widget_gallery.gallery-grid-4 li {
-    width: 30%;
-}
 
 
 
@@ -281,9 +241,7 @@ footer .widget ul {
 .name-contact{
     border-radius: 10px;
 }
-.email-contact{
 
-}
 
 
 /*Contact Form*/
@@ -298,20 +256,21 @@ footer .widget ul {
     font-size: 20px;
 }
 .contact-btn{
-    margin-inline: 0.5em;
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.568);
+    background-color: rgba(0, 0, 0, 1);
     color: white;
     font-weight: bold;
     border: 1px solid black;
     text-align: center;
     padding: 6px;
-    margin-inline: 1.6rem;
+    margin-inline: 3.6rem;
 }
 
 .contact-btn:hover{
-    color: black;
-    background-color:#2747bbcc ;
+    padding: 8px;
+    color: white;
+    background-color: rgba(0, 0, 0, 1);
+    border: rgba(0, 0, 0, 1);
 }
 
 @media screen and (max-width: 1440px) {

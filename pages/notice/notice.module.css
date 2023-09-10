@@ -1,0 +1,74 @@
+.container-info-2{
+    background-color:rgb(223, 220, 220);
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.box-info{
+    margin-inline: 2rem;
+    font-size: 2rem;
+    align-items: center;
+    padding: 10px;
+}
+
+.elite-title{
+    display: block;
+    font-size: 1em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: 600;
+    color: #4C1816;
+}
+
+.box-description{
+    display: block;
+    font-size: 0.9rem;
+    margin-block-start: 2.33em;
+    margin-block-end: 2.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: 500;
+    margin-inline: 0.5rem;
+}
+.box-description-1{
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.content-bottom{
+    margin: 50px;
+    margin-top: 0;
+}
+
+.blog-img{
+    padding: 20px;
+   border-radius: 5px;
+}
+
+.linkpage{
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #4C1816;
+    text-decoration: transparent;
+    margin-inline: 0.5rem;
+}
+
+.linkpage:hover{
+    color: #4C1816;
+    text-decoration: underline;
+}
+
+.description{
+    font-size: 1em;
+    margin: 50px;
+    margin-top: 0;
+}

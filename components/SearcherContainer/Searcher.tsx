@@ -7,15 +7,15 @@ export const Searcher = () => {
     return (
         <>
         <header className={styles["search-container"]}>
-            <img src="/images/apart1.jpg" alt="" className={styles["header-bg"]}/>
+            <img src="/images/team.jpg" alt="" className={styles["header-bg"]}/>
             <div className={styles["header-content"]}>
                 <div className="container-fluid">
                     <div className="row">
                         <div className={styles["container-content"]}>
                             <div className="col-md-8">
-                            <h1 className={styles["title-search"]}>Encuentra la propiedad que buscas</h1>
-                            <h4 className={styles["short-description"]}>Vamos a encontrar la propiedad perfecta para ti</h4>
-                            <div className={styles["search-links"]}>
+                            <h1 className={styles["title-search"]}>Grupo Elite Inmobialirio</h1>
+                            <h4 className={styles["short-description"]}>Vamos a encontrar la propiedad perfecta para ti</h4> 
+                             <div className={styles["search-links"]}>
                             <Link href='/estatesPage/3' className={styles["nav-item"]}>
                                 Comprar
                             </Link>

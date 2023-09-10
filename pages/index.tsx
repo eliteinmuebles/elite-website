@@ -6,19 +6,23 @@ import { About } from '../components/AboutContainer'
 import { Page } from '../components/Page'
 import { BlogSlider } from '../components/BlogSlider'
 import { EstateCard } from '../components/EstateCard'
-import { FeatureTest } from '../components/FeaturesTest'
+import { FeatureEstates } from '../components/FeaturesEstates'
 import { Market } from '../components/Market'
 import { AgentSlider } from '../components/AgentsSlider'
+import { AboutAgents } from '../components/AgentsContainer'
+import { Reviews } from '../components/Reviews'
+
 
 export default function Home() {
   return (
     <Page>
         <Searcher/>
-        <FeatureTest/>
-        <AgentSlider/>
-        <About/>
+        <FeatureEstates/>
+        <AboutAgents/>
         <Market/>
+        <About/>
         <BlogSlider/>      
+        <Reviews/>
     </Page>
     
   )

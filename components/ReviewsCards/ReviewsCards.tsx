@@ -1,44 +1,30 @@
-import styles from "./ZoneSliding.module.css"
-import Carousel from 'react-bootstrap/Carousel';
-import { CardZone } from "../CardZones"
-import { Slider } from "../Slider";
-import { useState, useEffect} from "react"
+import styles from "./ReviewsCards.module.css"
+import { ReviewsCardsProps } from "../../types/types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+    faStar,
+    faStarHalfStroke
+  } from "@fortawesome/free-solid-svg-icons";
 
-export const ReviewsCards = () => {
-    const [left, setLeft] = useState(false);
-    const [right, setRight] = useState(false);
- {/*}   const [info, setInfo] = useState([...mockZoneData].slice(0,3)); */}
-    const [sliceValue, setSliceValue] = useState(0);
-  
-   {/*} useEffect(() => {
-      if (left)  {
-        const value = [...mockZoneData].length
-         if (sliceValue === 0) {
-           setSliceValue(value -3)
-           setInfo([...mockZoneData].slice(value-3, value))
-         } else {
-           setInfo([...mockZoneData].slice(sliceValue-3, sliceValue))
-           setSliceValue(sliceValue - 3);
-         }
-       }
-     }, [left]) */}
-  
-    {/*} useEffect(() => {
-       if (right) {
-         const value = [...mockZoneData].length
-         if (sliceValue == value -3) {
-           setSliceValue(0);
-           setInfo([...mockZoneData].slice(0,3))
-         } else {
-           setInfo([...mockZoneData].slice(sliceValue + 3, sliceValue + 3*2))
-           setSliceValue((sliceValue + 3))
-         }
-       }
-     }, [right]) */}
 
+export const ReviewsCards = ({id, photo, name, review}: ReviewsCardsProps) => {
+    
     return (
         <>
-        
+        <div className={styles["review-card-container"]} style={{width:"90%"}}>
+          <img src={photo} className={styles["photo"]}/>
+          <div className="m-2">
+            <h1>{name}</h1>
+            <div className={styles["stars"]}>
+                <FontAwesomeIcon icon={faStar}/>
+                <FontAwesomeIcon icon={faStar}/>
+                <FontAwesomeIcon icon={faStar}/>
+                <FontAwesomeIcon icon={faStar}/>
+                <FontAwesomeIcon icon={faStarHalfStroke}/>
+            </div>
+            <p>{review}</p>
+          </div>
+        </div>
         </>
     )
 } 

@@ -7,8 +7,8 @@
 .navbar-nav{
 	font-weight: bold;
 	color: white;
+   
 }
-
 .nav-link{
     color: green;
 }
@@ -33,7 +33,9 @@
     color: #ffffffc2;
 }
 
-
+.icon-header{
+    color:  #B99875;
+}
 
 .btn-modal{
     display: block;
@@ -60,6 +62,13 @@
 	transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
 	text-decoration: none;
 	color: rgba(255,255,255,.55);
+}
+
+.logo-header{
+    border-radius: 50%;
+    height: 60px;
+    width: 70px;
+    opacity: 0.7;
 }
 
 .title-elite:hover{
