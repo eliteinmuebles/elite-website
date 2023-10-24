@@ -1,0 +1,22 @@
+.market-container {
+    height: 80vh;
+  }
+  
+  .market-container h1 {
+    font-size: 48px;
+  }
+  
+  .market-container p {
+    font-size: 18px;
+  }
+  
+  .btn-outline-custom {
+    color: #D09426;
+    border-color: #D09426;
+  }
+  
+  .btn-outline-custom:hover {
+    background-color: #D09426;
+    color: white;
+  }
+  

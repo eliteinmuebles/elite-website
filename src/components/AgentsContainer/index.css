@@ -1,0 +1,9 @@
+.agent-image {
+    filter: brightness(50%);
+    transition: filter 0.5s ease;
+  }
+  
+  .agent-image:hover {
+    filter: brightness(100%);
+  }
+  

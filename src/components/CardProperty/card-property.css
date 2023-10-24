@@ -1,0 +1,78 @@
+.property-card {
+  width: 354px;
+  height: 625px;
+  position: relative;
+  border: 0;
+  border-radius: 0;
+}
+
+.property-image {
+  height: 100%;
+  width: 100%;
+  border: 0;
+  border-radius: 0;
+}
+
+.property-image {
+  filter: brightness(50%);
+  transition: filter 0.5s ease;
+}
+
+.property-image:hover {
+  filter: brightness(100%);
+}
+
+.isotipo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1.5rem;
+}
+
+.more-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 30px;
+  background-color: #D59F3C;
+  margin: 1.5rem;
+  border-radius: 2px;
+}
+.more-button:hover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 30px;
+  background-color: #D59F3C;
+  margin: 1.5rem;
+  border-radius: 2px;
+}
+
+.property-title {
+  position: absolute; 
+  bottom: 0;
+  left: 0;
+  color: white;
+  margin-bottom: 3.5rem;
+  padding-left: 1rem;
+}
+.text-description{
+  position: absolute; 
+  bottom: 0;
+  left: 0;
+  color: white;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  color: #D09426;
+}
+
+.price-text {
+  position: absolute; 
+  bottom: 0;
+  right: 0;
+  color: white;
+  margin-bottom: 3.5rem;
+  padding-right: 1rem;
+}
