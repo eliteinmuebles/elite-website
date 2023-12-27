@@ -1,0 +1,24 @@
+.featured-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1A1A1A;
+    padding: 2rem;
+}
+  
+  
+  
+.more-properties-button {
+    margin-top: 1.5rem;
+    background-color: #D09426;
+    color: black;
+    font-size: 18px;
+}
+
+.more-properties-button:hover {
+    margin-top: 1.5rem;
+    background-color: #D09426;
+    font-size: 18px;
+    color: black;
+}

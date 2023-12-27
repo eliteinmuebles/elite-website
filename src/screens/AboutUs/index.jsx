@@ -9,12 +9,12 @@ export const AboutUs = () => {
             <Container fluid style={{ background: 'linear-gradient(to bottom, #000 50%, #fff 50%)',  marginTop:"6rem" }}>
                 <Row className="justify-content-md-center p-4" >
                     <h1 style={{ color: '#E8CA93', fontSize: '72px' }}>Conoce cómo puede ayudarte nuestro Grupo Elite</h1>
-                    <p style={{color:"white"}}>Te ofrecemos la llave hacia un nuevo capítulo de tu vida y te guiamos en cada paso del camino</p>
+                    <p style={{color:"white", fontSize:"24px"}}>Te ofrecemos la llave hacia un nuevo capítulo de tu vida y te guiamos en cada paso del camino</p>
                 </Row>
             
             
                 <Row>
-                    <Col style={{display:"flex", justifyContent:"center"}}>
+                    <Col style={{display:"flex", justifyContent:"center", marginBottom:"1rem"}}>
                         <Image src={image} fluid />
                     </Col>
                 </Row>
